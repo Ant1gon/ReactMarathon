@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import ReactLogo from './assets/bg3.jpg';
 
 console.log(ReactLogo);
-const logoUrl = `url('${ReactLogo}')`;
+const logoUrl = `url('${ReactLogo}') center/cover no-repeat`;
 const App = () => {
   return (
     //React.fragment
