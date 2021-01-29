@@ -1,5 +1,5 @@
 import s from './style.module.css'
-const Header = ({ title = null, descr = null }) => {
+const Header = ({ title = false, descr = false }) => {
     return (<header className={s.root}>
         <div className={s.forest}></div>
         <div className={s.container}>
