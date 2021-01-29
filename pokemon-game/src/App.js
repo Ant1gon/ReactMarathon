@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Layout from './components/Layout';
+import Footer from './components/Footer';
+import ReactLogo from './assets/bg3.jpg';
 
-function App() {
+console.log(ReactLogo);
+const logoUrl = `url('${ReactLogo}') center/cover no-repeat`;
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //React.fragment
+    <>
+      <Header title="title" descr="desc" />
+      <Layout id="1" title="title" descr="desc" urlBg= {logoUrl} />
+      <Layout id="2" title="title" descr="desc" colorBg="rgb(116 225 255)"/>
+      <Layout id="3" title="title" descr="desc" urlBg= {logoUrl}/>
+      <Footer />
+    </>
+  )
 }
 
 export default App;
