@@ -1,24 +1,22 @@
-import cn from 'classnames';
-import { useState } from 'react';
-import Menu from '../Menu';
-import Navbar from '../Navbar';
-import s from './style.module.css'
-const MenuHeader = ({ handleNavigate }) => {
-  const [isMenuActive, setMenuActive] = useState(false);
-  const handleClickButton = (state) => {
-    setMenuActive(state);
-  }
-  const handleChangePage = (page) => {
-    handleNavigate && handleNavigate(page);
-  }
-  
+//import cn from "classnames";
+import { useState } from "react";
+import Menu from "../Menu";
+import NavBar from "../Navbar";
+//import s from "./style.module.css";
+
+const MenuHeader = ({ bgActive }) => {
+  const [isOpen, setOpen] = useState(null);
+
+  const handleClickHamburg = () => {
+    setOpen(prevState => !prevState);
+  };
+
   return (
     <>
-      <Menu state= {isMenuActive} handleChangePage = {handleChangePage} />
-      <Navbar onClickMenuButton = {handleClickButton} />
+      <Menu isOpen={isOpen} onClickLink={handleClickHamburg} />
+      <NavBar isOpen={isOpen} bgActive={bgActive}  onClickHamburg={handleClickHamburg} />
     </>
   );
 };
 
 export default MenuHeader;
-

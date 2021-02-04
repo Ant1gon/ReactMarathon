@@ -1,20 +1,18 @@
-import { useState } from 'react';
-import cn from 'classnames';
-import s from './style.module.css'
-const Navbar = ({ title = false, descr = false, onClickMenuButton }) => {
-  const [isActive, setActive] = useState(false);
-    const handleMenuClick = () => {
-        setActive(!isActive);
-        onClickMenuButton && onClickMenuButton(!isActive);
-    }
+//import { useState } from "react";
 
+import { Link } from "react-router-dom";
+import cn from "classnames";
+import s from "./style.module.css";
+const NavBar = ({ isOpen, bgActive = false, onClickHamburg }) => {
   return (
-    <nav id={s.navbar}>
+    <nav id={s.navbar} className={cn({ [s.bgActive]: bgActive })}>
       <div className={s.navWrapper}>
-        <p className={s.brand}>
-          LOGO
-        </p>
-        <a className={cn(s.menuButton, isActive ? s.active : s.deactive)} onClick={handleMenuClick}>
+        <Link to="/" className={s.brand}>LOGO</Link>
+        <a
+          href="#game"
+          className={cn(s.menuButton, { [s.active]: isOpen })}
+          onClick={onClickHamburg}
+        >
           <span />
         </a>
       </div>
@@ -22,5 +20,4 @@ const Navbar = ({ title = false, descr = false, onClickMenuButton }) => {
   );
 };
 
-export default Navbar;
-
+export default NavBar;
