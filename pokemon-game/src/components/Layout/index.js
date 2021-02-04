@@ -1,7 +1,7 @@
+import cn from 'classnames';
 import s from './style.module.css'
 const Layout = ({ id = false, title = false, urlBg = false, colorBg = false, children }) => {
     let backgroundUrl = `url('${urlBg}') center/cover no-repeat` ;
-    let backgroundColor = { backgroundColor: `${colorBg}` }
     const style = {};
     if (urlBg) { style.background = backgroundUrl }
     if (colorBg) { style.backgroundColor = `${colorBg}` }
@@ -14,7 +14,7 @@ const Layout = ({ id = false, title = false, urlBg = false, colorBg = false, chi
                         <h3>{title}</h3>
                         <span className={s.separator}></span>
                     </div>
-                    <div className={`${s.desc} ${s.full}`}>
+                    <div className={cn(s.desc,s.full)}>
                         {children}
                     </div>
                 </article>
