@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouteMatch, Route, Switch, Redirect } from "react-router-dom";
+
 import cn from "classnames";
 
 import HomePage from "./routes/Home";
@@ -11,7 +12,6 @@ import MenuHeader from "./components/MenuHeader";
 import Footer from "./components/Footer";
 
 import s from "./style.module.css";
-
 
 
 const App = () => {
