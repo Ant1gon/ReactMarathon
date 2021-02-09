@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Layout from '../../components/Layout';
-import Footer from '../../components/Footer';
-import MenuHeader from '../../components/MenuHeader';
-import PokemonCard from '../../components/PokemonCard';
-import POKEMONS from '../../components/data/pokemons.json';
-import bg3 from '../../assets/bg3.jpg';
-import s from './style.module.css';
+// import Footer from '../../components/Footer';
+// import MenuHeader from '../../components/MenuHeader';
+// import PokemonCard from '../../components/PokemonCard';
+// import POKEMONS from '../../components/data/pokemons.json';
+// import bg3 from '../../assets/bg3.jpg';
+// import s from './style.module.css';
 
 
 const HomePage = ({onChangePage}) => {

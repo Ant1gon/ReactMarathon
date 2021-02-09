@@ -1,4 +1,6 @@
-import { useState } from "react";
+
+//import { useState } from "react";
+
 
 import { Link } from "react-router-dom";
 import cn from "classnames";
@@ -9,6 +11,7 @@ const NavBar = ({ isOpen, bgActive = false, onClickHamburg }) => {
       <div className={s.navWrapper}>
         <Link to="/" className={s.brand}>LOGO</Link>
         <a
+          href="#game"
           className={cn(s.menuButton, { [s.active]: isOpen })}
           onClick={onClickHamburg}
         >

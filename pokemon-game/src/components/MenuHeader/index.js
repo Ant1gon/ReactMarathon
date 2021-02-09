@@ -1,8 +1,9 @@
-import cn from "classnames";
+
+//import cn from "classnames";
 import { useState } from "react";
 import Menu from "../Menu";
 import NavBar from "../Navbar";
-import s from "./style.module.css";
+//import s from "./style.module.css";
 
 const MenuHeader = ({ bgActive }) => {
   const [isOpen, setOpen] = useState(null);
