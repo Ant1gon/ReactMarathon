@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState } from "react";
 import { useRouteMatch, Route, Switch, Redirect } from "react-router-dom";
 import cn from "classnames";
 
@@ -9,6 +9,7 @@ import ContactPage from "./routes/Contact";
 import NotFoundPage from "./routes/NotFound";
 import MenuHeader from "./components/MenuHeader";
 import Footer from "./components/Footer";
+//import { PokemonContext } from './context/pokemonContext';
 
 import s from "./style.module.css";
 
@@ -16,7 +17,13 @@ import s from "./style.module.css";
 
 const App = () => {
   const match = useRouteMatch("/");
+  // const [pokemons, setPokemons]= useState([])
+
+  // const handlerChangePokemons = (val)=>{
+  //   setPokemons(val);
+  // }
   return (
+    // <PokemonContext.Provider value={{ pokemons, onChangePokemons: handlerChangePokemons}} >
     <Switch>
       <Route path="/404" component={NotFoundPage} />
       <Route>
@@ -38,6 +45,7 @@ const App = () => {
         </>
       </Route>
     </Switch>
+    // </PokemonContext.Provider>
   )
 };
 
