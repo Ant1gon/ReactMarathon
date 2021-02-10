@@ -1,9 +1,11 @@
+
 import { useState, useEffect, useContext } from 'react';
 import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
 import StartPage from './Start';
 import BoardPage from './Board';
 import FinishPage from './Finish';
 import { PokemonContext } from '../../context/pokemonContext';
+
 
 //import s from './style.module.css'
 
