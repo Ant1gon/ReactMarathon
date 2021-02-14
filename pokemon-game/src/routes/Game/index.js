@@ -1,9 +1,11 @@
+
 import { useState, /*useEffect*/ } from 'react';
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import { PokemonContext } from '../../context/pokemonContext';
 import BoardPage from './routes/Board';
 import FinishPage from './routes/Finish';
 import StartPage from './routes/Start';
+
 
 //import s from './style.module.css'
 

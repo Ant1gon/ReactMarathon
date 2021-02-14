@@ -1,5 +1,7 @@
+
 import { React } from "react";
 import { useLocation, Route, Switch, Redirect } from "react-router-dom";
+
 import cn from "classnames";
 
 import HomePage from "./routes/Home";
@@ -15,7 +17,6 @@ import { FirebaseContext } from "./context/firebaseContext";
 import Firebase from "./service/firebase";
 
 import s from "./style.module.css";
-
 
 
 const App = () => {
